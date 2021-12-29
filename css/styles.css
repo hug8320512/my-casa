@@ -1,0 +1,496 @@
+@import url(../css/featured.properties.css);
+@import url(../css/destinations.css);
+@import url(../css/property-types.css);
+@import url(../css/testimonials.css);
+@import url(../css/swiper-min.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+button:focus,
+button:active {
+  box-shadow: none !important;
+}
+
+h1,
+h2.main-title {
+  font-family: "Noe Display Medium", Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.container {
+  max-width: 1400px;
+  padding-left: 6.59vw;
+  padding-right: 6.59vw;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.px-3-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.parallax-wrapper {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+
+.parallax-wrapper {
+  position: relative;
+  display: block;
+  height: 50vh;
+}
+
+/* NAVIGATION */
+#mainNav {
+  position: fixed;
+  transform: translateY(0%);
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0;
+  transition: transform 0.2s, box-shadow 0.2s ease-in-out, padding 0.5s,
+    background-color 0.5s;
+  animation-direction: normal, normal, reverse, normal;
+}
+
+#mainNav .container {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#mainNav a {
+  white-space: nowrap;
+}
+
+#mainNav .nav-link {
+  padding-top: 0.625rem;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+}
+
+#mainNav a:not(.prv-button) {
+  font-family: "Heebo", Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+#mainNav .navbar-toggler {
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+}
+
+#mainNav.white a {
+  color: #fff;
+}
+
+#mainNav a span:after {
+  display: block;
+  content: "";
+  border-bottom: solid 1px;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+  transform-origin: 0% 50%;
+}
+
+#mainNav a span:hover:after {
+  transform: scaleX(1);
+}
+
+#mainNav.white .prv-button {
+  border-color: #fff;
+}
+
+#mainNav .navbar-brand {
+  margin-right: 0;
+  padding: 0;
+}
+
+#mainNav .nav-top {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+#mainNav .navbar-brand img {
+  width: auto;
+  height: 55px;
+}
+
+#mainNav.white .navbar-brand img {
+  content: url("https://www.pratariversidevillage.com/wp-content/uploads/2019/10/icone_mobile_branco.png");
+}
+
+#mainNav .navbar-toggler .hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 15px;
+}
+
+#mainNav .navbar-toggler .hamburger-icon .line {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#mainNav .navbar-toggler .line:nth-child(1) {
+  animation: line-up-close 0.2s;
+  transform: translateY(0) rotate(0);
+}
+
+#mainNav.white .navbar-toggler .hamburger-icon .line {
+  background-color: #fff;
+}
+
+#mainNav .prv-button {
+  padding: 0.69rem 1.25rem;
+  border-radius: 0;
+  border: 2px solid #000;
+  background-color: transparent;
+  white-space: nowrap;
+  font-family: "Heebo", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #000;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+
+#mainNav #icones-header {
+  justify-content: space-around;
+  width: 110px;
+  display: flex;
+  transform: translateX(9px);
+}
+
+#mainNav #icones-header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mainNav .social-img {
+  width: auto;
+  height: 20px;
+}
+
+#mainNav .footer-note-mobile {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#mainNav .navbar-collapse .footer-note-mobile a {
+  font-family: "Heebo", Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+}
+
+/* JS WORK */
+#mainNav.stopTransitionPadding {
+  transition: transform 0.2s, box-shadow 0.2s ease-in-out !important;
+}
+#mainNav.posAbs {
+  position: absolute !important;
+  transition: none !important;
+}
+
+#mainNav.hide {
+  transform: translateY(-100%);
+  box-shadow: none;
+  transition: transform 0.3s !important;
+}
+#mainNav.navbar-shrink {
+  background-color: #fff;
+  box-shadow: 0px -5px 16px rgb(0 0 0 / 20%);
+}
+
+#mainNav.black a,
+#mainNav.navbar-shrink a {
+  color: #000;
+}
+
+#mainNav.black .navbar-brand img,
+#mainNav.navbar-shrink .navbar-brand img,
+#mainNav.show .navbar-brand img {
+  content: url("https://www.pratariversidevillage.com/wp-content/uploads/2019/10/icone_mobile_preto.png");
+}
+
+#mainNav.black .navbar-toggler .hamburger-icon .line,
+#mainNav.navbar-shrink .navbar-toggler .hamburger-icon .line,
+#mainNav.show .navbar-toggler .hamburger-icon .line {
+  background-color: #000;
+}
+
+#mainNav.black .prv-button,
+#mainNav.navbar-shrink .prv-button {
+  border-color: #000;
+}
+
+#mainNav.show {
+  background-color: #fff;
+  width: 100vw;
+  padding-bottom: 0;
+}
+
+#mainNav.show a {
+  color: #000;
+}
+#mainNav.show .prv-button {
+  border-color: #000;
+}
+
+#mainNav.show .container {
+  height: 100%;
+}
+
+#mainNav.show .navbar-toggler .hamburger-icon .line:nth-child(1) {
+  animation: line-up-open 0.2s;
+  transform: translateY(6px) rotate(-45deg);
+}
+#mainNav.show .navbar-toggler .hamburger-icon .line:nth-child(2) {
+  transform: scale(0);
+}
+#mainNav.show .navbar-toggler .hamburger-icon .line:nth-child(3) {
+  animation: line-down-open 0.2s;
+  transform: translateY(-6px) rotate(45deg);
+}
+
+#mainNav.show .navbar-collapse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 0%;
+}
+
+#mainNav.show .navbar-nav a {
+  font-family: "Noe Display Medium", Arial, Helvetica, sans-serif;
+  font-size: 1.75rem;
+  line-height: 15px;
+  padding-bottom: 20px;
+}
+
+#mainNav.show .navbar-nav {
+  text-align: center;
+  flex-grow: 1;
+  justify-content: center;
+  margin: 0 auto !important;
+}
+
+/* RESPONSIVE NAVIGATION */
+@media (min-width: 992px) {
+  #mainNav {
+    padding: 2.5rem 0;
+  }
+  #mainNav.navbar-shrink {
+    padding: 0.8rem 0;
+  }
+
+  #mainNav .nav-top {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #mainNav .side-items {
+    position: relative;
+  }
+
+  #mainNav .navbar-collapse {
+    padding: 0 2.25rem;
+  }
+
+  #mainNav .navbar-toggler {
+    display: none;
+  }
+
+  #mainNav .container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  #mainNav.white .navbar-brand img {
+    content: url("https://www.pratariversidevillage.com/wp-content/uploads/2019/11/ID_white.svg");
+  }
+
+  #mainNav.black .navbar-brand img,
+  #mainNav.navbar-shrink .navbar-brand img {
+    content: url("https://www.pratariversidevillage.com/wp-content/uploads/2019/11/ID.svg");
+  }
+
+  #mainNav .navbar-brand img {
+    width: 210px;
+    height: auto;
+  }
+
+  #mainNav.navbar-shrink img {
+    width: 170px;
+    height: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/* HERO SECTION */
+.header {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body.is-mobile .header-background {
+  background-attachment: initial;
+}
+
+.parallax-clip-path {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip: rect(0, auto, auto, 0);
+}
+
+.parallax-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  -webkit-transform: translateZ(0);
+  transform-style: preserve-3d;
+}
+
+.header-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.icon-scroll {
+  font-family: "ssicons" !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 20px;
+  height: 35px;
+  margin-left: -10px;
+  position: fixed;
+  bottom: 20px;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 3px #fff;
+  border-radius: 25px;
+  z-index: 99;
+}
+
+.icon-scroll:before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  margin-left: -2px;
+  top: 4px;
+  border-radius: 4px;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+}
+
+.icon-scroll:before {
+  position: absolute;
+}
+
+.icon-scroll,
+.icon-scroll:before {
+  left: 50%;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media (min-width: 576px) {
+  .header h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container.container-small {
+    max-width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -3,7 +3,8 @@
 @import url(../css/property-types.css);
 @import url(../css/testimonials.css);
 @import url(../css/notices.css);
-
+@import url(../css/form.css);
+@import url(../css/footer.css);
 * {
   padding: 0;
   margin: 0;
@@ -221,6 +222,7 @@ section {
   font-family: "Heebo", Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
 }
+
 
 /* JS WORK */
 #mainNav.stopTransitionPadding {

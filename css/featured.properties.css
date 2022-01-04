@@ -175,16 +175,17 @@
 }
 
 .text-end h5 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   font-family: "Heebo", Arial, Helvetica, sans-serif;
   color: #000000;
+  text-align: left;
 }
 
 .text-end h6 {
   font-family: "Heebo", Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 400;
   color: #666666;
   margin-top: 9px;
 }
@@ -235,7 +236,7 @@
   }
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px) {
   .box-card {
     margin-top: -100px;
   }

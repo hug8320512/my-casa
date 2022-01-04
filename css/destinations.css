@@ -332,6 +332,7 @@
   background-size: cover;
   height: 450px;
   position: relative;
+  margin-top: -80px;
 }
 
 .overlay {
@@ -374,7 +375,7 @@
 
 .hvr-ripple-out:before {
   border-radius: 50%;
-  content: '';
+  content: "";
   position: absolute;
   border: #fff solid 2px;
   top: 0;
@@ -397,29 +398,28 @@
 
 @-webkit-keyframes hvr-ripple-out {
   100% {
-      top: -12px;
-      right: -12px;
-      bottom: -12px;
-      left: -12px;
-      opacity: 0;
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
   }
 }
 
 @keyframes hvr-ripple-out {
   100% {
-      top: -12px;
-      right: -12px;
-      bottom: -12px;
-      left: -12px;
-      opacity: 0;
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
   }
 }
 
-
-@media screen and (max-width: 991px){
-  .section-title{
+@media screen and (max-width: 991px) {
+  .section-title {
     margin-top: -70px;
-  } 
+  }
 }
 
 @media screen and (max-width: 767px) {

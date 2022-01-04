@@ -1,7 +1,3 @@
-#form {
-  overflow: hidden;
-  padding: 60px 3% 100px;
-}
 
 .title-wrap-centre {
   display: -webkit-box;
@@ -292,7 +288,7 @@ input.w-button {
 }
 
 .section-contact {
-  margin-top: -70px;
+  margin-top: -150px;
 }
 
 .w-layout-grid {
